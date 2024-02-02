@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body{
+        background-color: rgba(172, 227, 228, 0.795);
+        border: 2px solid thistle;
+    }
+    .pi{background-color: aquamarine;
+         font-size: xx-large;
+        color: rgb(21, 24, 24);
+        text-align: center;
+    }
+    .pl{
+        background-color: darksalmon;
+        text-align: center;
+        font-size: large;
+        color: blue;
+    }
+    .kl{
+      border: 10px;
+    }
+   .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg?cs=srgb&dl=pexels-tobi-620337.jpg&fm=jpg");
+  border-radius: 50%;
+  background-color: rgb(118, 100, 109);
+  border: 10px;
+}
+input[type="text"],input[type="email"],input[type="password"]
+        ,select , textarea {
+            width: 90%;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        input[type="submit"],input[type="reset"]{
+            background-color: rgba(255, 0, 34, 0.585);
+            color: aqua;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            transition: 0.5s;
+
+        }
+        input:focus , textarea:focus, select:focus{
+            background-color: darksalmon;
+            
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover{
+            background-color: darkblue;
+            transform:scale(1.10);
+            cursor: pointer;
+        }
+        
+        form{
+          
+          background-color: rgb(127, 234, 227);
+            background-size: cover;
+            font-family: 'Times New Roman', Times, serif;
+            background-repeat: no-repeat;
+            background-position: center;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            height: 100vh;
+        }
+    .by{
+      
+            background-color: rgb(54, 243, 98);
+            padding: 8px;
+            border-radius: 8px;
+            width: 400px;
+        
+    }
+  </style>
+</head>
+<body>
+    <div class="pi">
+    <p1>Md Israr</p1>
+    </div>
+    <div class="pl">
+        <h3><hr>Introduction</h3>
+        <p>Hello everyone ,i am Md Israr from Bihar.<br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+             Accusamus aliquid cupiditate, veritatis minima earum at, 
+             impedit officiis ratione, sapiente voluptas modi autem nam
+              sunt laboriosam sint reiciendis! Accusantium, adipisci recusandae?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita omnis
+               ut natus, ipsa quaerat perspiciatis voluptas asperiores, eos ducimus 
+               laborum sint? Temporibus commodi debitis corporis facilis dignissimos 
+               architecto! Ducimus, dicta?
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit modi, placeat et illo aliquid animi officiis eos amet, aut ad optio assumenda repellat voluptates? Excepturi beatae quis fugiat veniam cum.
+            
+        </p>
+    </div>
+    <div class="kl">
+  <a href="C:\Users\mdala\OneDrive\Pictures\Saved Pictures\123.jpeg"><img src="C:\Users\mdala\OneDrive\Pictures\Saved Pictures\123.jpeg" width="120" height="160" class="center" style="background-color: indigo;" ></a>
+</div>
+<form style="justify-content: center;">
+  <div class="by">
+  <h2>
+    Don't have an account?! Want to join us?!
+  </h2>
+  <label for="name"> First Name </label><input type="text" value="" id="name" placeholder="Enter your first name"><br><br>
+  <label for="name"> Last Name </label><input type="text" value="" id="name" placeholder="Enter your last name"><br><br>
+  <label for="gender">Gender </label> <input type="radio" value="male">Male
+  <input type="radio" value="Female">Female
+  <input type="radio" value="others">Others
+  <br><br>
+  <label for="cities">Select City: </label><br>
+  <select name="city" id="city">
+      <option value="cities">Select</option>
+      <option value="Gurugram">Gurugram</option>
+      <option value="Mumabi">Mumbai</option>
+      <option value="banglore">Banglore</option>
+      <option value="pune">Pune</option>
+      <option value="indore">Indore</option>
+  </select><br><br>
+  <label for="address">Address </label><br>
+  <textarea name="Address" id="address" cols="20" rows="10"></textarea><br><br>
+  <label for="email">Email: </label>
+  <input type="email" placeholder="Enter your email " id="email">
+  <br><br>
+  <label for="password">Password </label>
+  <input type="password" placeholder="*********">
+  <br><br>
+  <label for="file">Select File</label>
+  <input type="file" value="file"><br><br>
+  <input type="submit">
+  <input type="reset">
+</div></form>
+</body>
+</html>

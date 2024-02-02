@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr td{
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid green;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend> User Information</legend>
+        <form action="#" autocomplete="off" onsubmit="return checkForm()">
+            <table style="width: 100%" cellpadding="10" cellspacing="10" align="center">
+                <tr><td><input type="text" id="name" placeholder="your name"> <span id="name1"></span></td></tr>
+                <tr><td><input type="password" id="pass" placeholder="enter your password"> <span id="name2"></span></td></tr>
+                <tr><td><input type="password" id="pass1" placeholder="confirm password"> <span id="name3"></span></td></tr>
+                <tr><td><input type="number" id="num" placeholder="your number"> <span id="name4"></span></td></tr>
+                <tr><td><input type="email" id="email" placeholder="your email"> <span id="name5"></span></td></tr>
+                <tr><td><input type="submit" id="button" value="submit"></td></tr>
+            </table>
+        </form>
+    </fieldset>
+
+    <script>
+        function checkForm() {
+            var name = document.getElementById('name').value;
+            var pass = document.getElementById('pass').value;
+            var pass1 = document.getElementById('pass1').value;
+            var num = document.getElementById('num').value;
+            var email = document.getElementById('email').value;
+
+            // Clear previous error messages
+            clearErrors();
+
+            var isValid = true;
+
+            // Check name
+            if (name.trim() === "") {
+                document.getElementById('name1').innerHTML = "Name should not be empty";
+                isValid = false;
+            }
+
+            // Check password
+            if (pass.trim() === "") {
+                document.getElementById('name2').innerHTML = "Password should not be empty";
+                isValid = false;
+            }
+
+            // Check password confirmation
+            if (pass !== pass1) {
+                document.getElementById('name3').innerHTML = "Passwords do not match";
+                isValid = false;
+            }
+
+            // Check number
+            if (num.trim() === "" || isNaN(num)) {
+                document.getElementById('name4').innerHTML = "Please enter a valid number";
+                isValid = false;
+            }
+
+            // Check email
+            if (email.trim() === "" || !validateEmail(email)) {
+                document.getElementById('name5').innerHTML = "Please enter a valid email";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function clearErrors() {
+            var errorSpans = document.querySelectorAll('span[id^="name"]');
+            errorSpans.forEach(function(span) {
+                span.innerHTML = "";
+            });
+        }
+
+        function validateEmail(email) {
+            // Regular expression for basic email validation
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>
